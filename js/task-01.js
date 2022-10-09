@@ -5,17 +5,11 @@
 //     (тега < h2 >) и количество элементов в категории(всех вложенных в него < li >).
 
 
-const categoryRef = document.querySelectorAll(`ul#categories`);
+const categoresLi = document.querySelectorAll("li.item")
 
-const ulRef = document.querySelectorAll(`li.item`);
-console.log(`Number of categories:`, ulRef.length);
-
-
-const nameCategRef = document.querySelectorAll(`.item`);
-
-nameCategRef.forEach( element => {
-    const categName = element.firstElementChild;
-    const elemNumber = element.querySelectorAll("li");
-    console.log(`Category: ${categName.textContent}`);
-    console.log(`Elements: ${elemNumber.length}`)
+console.log(`Number of categories: ${categoresLi.length}`);
+categoresLi.forEach((item) => {
+    console.log(`Category: ${item.firstElementChild.textContent}`)
+    console.log(`Elements:: ${item.lastElementChild.children.length}`)
 });
+

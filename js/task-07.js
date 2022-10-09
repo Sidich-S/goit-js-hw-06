@@ -5,7 +5,7 @@
 const simplyBtn = document.querySelector("#font-size-control");
 const wordRef = document.querySelector('#text');
 
-simplyBtn.addEventListener('change', onTextChangeFont)
+simplyBtn.addEventListener('input', onTextChangeFont)
 
 
 function onTextChangeFont() {
